@@ -1,10 +1,5 @@
-public class Encryption
-{
-    public static void main(String[] args){
-        
-        System.out.println("Welcome to the Encryption / Decryption Program");
-        
-    }
+import java.util.*;
+public class Encryption{
     //Oz (methods 1)
     public static int wordsCount(String sentence){
         int len1 = sentence.length();
@@ -60,7 +55,7 @@ public class Encryption
         return sentence;
         }
         //move the characters back to left-stern part
- public static String moveLeft(String sentence,int words){
+    public static String moveLeft(String sentence,int words){
         if(words==1){
             String lastchar = sentence.substring(0,1);
             String restofchar=sentence.substring(1);
@@ -94,4 +89,35 @@ public class Encryption
         result = sentence.replace('&','u');
         return result;
     }
-}
+    //main-moishie's part
+    public static void main(String[] args){
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Welcome to the Encryption / Decryption Program");
+        System.out.println("Enter 1 for Encrypt | 2 for Decrypt");
+        int choice=scan.nextInt();
+        if(choice==1){
+         System.out.println("Enter up to 3 words sentence");
+         String sentence=scan.nextLine();
+         int words= wordsCount(sentence);
+         if(words>3){
+             System.out.println(sentence+"contains more than 3 words");
+         }else{
+             sentence = movingRight(sentence,words);
+             sentence = moveRight(sentence,words);
+             sentence = replaceVowels(sentence);
+             System.out.println(sentence);
+             
+         }
+        }else if(choice==2){
+            System.out.println("Enter up to 3 words sentence");
+            String sentence=scan.nextLine();
+            int words= wordsCount(sentence);
+            sentence = replaceSpecialCharacter(sentence);
+            sentence = movingLeft(sentence,words);
+            sentence = moveLeft(sentence,words);
+            System.out.println("The decrypted sentence:"+sentence);
+        }else{
+            System.out.println(choice+"is not a valid choice");
+        }
+    }
+    }
