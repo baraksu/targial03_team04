@@ -29,7 +29,7 @@ public class Encryption{
         }
         return sentence;
     }
-    //move the characters to right-stern part
+    //move the characters to right-stern part(method 4)
     public static String moveRight(String sentence,int words){
         int len = sentence.length();
         if(words==1){
@@ -54,7 +54,7 @@ public class Encryption{
 
         return sentence;
         }
-        //move the characters back to left-stern part
+        //move the characters back to left-stern part (method 5)
     public static String moveLeft(String sentence,int words){
         if(words==1){
             String lastchar = sentence.substring(0,1);
