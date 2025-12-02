@@ -6,7 +6,7 @@ public class Encryption
         
     }
     //Oz (methods 1)
-    public static int WordsCount(String sentence){
+    public static int wordsCount(String sentence){
         int len1 = sentence.length();
         String sentence1 = sentence.replace(" ","");
         int len2 = sentence1.length();
@@ -14,7 +14,7 @@ public class Encryption
         return words;
     }
     //Oz (methods 2)
-        public static String MovingRight(String sentence,int words){
+        public static String movingRight(String sentence,int words){
         String word1 = "";
         String word2 = "";
         String word3 = "";
@@ -35,7 +35,7 @@ public class Encryption
         return sentence;
     }
     //move the characters to right-stern part
-    public static String MoveRight(String sentence,int words){
+    public static String moveRight(String sentence,int words){
         int len = sentence.length();
         if(words==1){
             String lastchar = sentence.substring(len-1);
@@ -60,7 +60,7 @@ public class Encryption
         return sentence;
         }
         //move the characters back to left-stern part
- public static String MoveLeft(String sentence,int words){
+ public static String moveLeft(String sentence,int words){
         if(words==1){
             String lastchar = sentence.substring(0,1);
             String restofchar=sentence.substring(1);
@@ -77,7 +77,7 @@ public class Encryption
         return sentence;
     }
       //replacing vowels to special characters-Moishie's part
-    public static String ReplaceVowels(String sentence){
+    public static String replaceVowels(String sentence){
         String result = sentence.replace('a','@');
         result = sentence.replace('e','#');
         result = sentence.replace('i','1');
@@ -86,7 +86,7 @@ public class Encryption
         return result;
     }
     //replacing special characters to vowels-Moishie's part
-    public static String ReplaceSpecialCharacter(String sentence){
+    public static String replaceSpecialCharacter(String sentence){
         String result = sentence.replace('@','a');
         result = sentence.replace('#','e');
         result = sentence.replace('1','i');
