@@ -2,20 +2,39 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-/**
- * Write a description of class EncryptionTester here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+import static org.junit.Assert.*;
+import org.junit.Test;
 public class EncryptionTester
 {
     @Test
-    public void testAdd(){
+   public static void testAdd0(){
         
-        int result = Encryption.add(2,3);
-        assertEquals(5,result);
+        String result = Encryption.moveLeft("abcd",1);
+        assertEquals("dabc",result);   
+    }
+    @Test
+   public static void testAdd1(){
         
+        String result = Encryption.moveLeft("agcd",1);
+        assertEquals("dagc",result);   
+    }
+    @Test
+   public static void testAdd2(){
+        
+        String result = Encryption.moveLeft("yghwy",1);
+        assertEquals("yyghw",result);   
+    }
+    @Test
+   public static void testAdd3(){
+        
+        String result = Encryption.moveLeft("abcd efgh",2);
+        assertEquals("ghabcd ef",result);   
+    }
+    @Test
+   public static void testAdd4(){
+        
+        String result = Encryption.moveLeft("abcd efgh ijkl",3);
+        assertEquals("i efgh jklabcd",result);   
     }
     
 }
