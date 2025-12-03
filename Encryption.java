@@ -29,6 +29,9 @@ public class Encryption{
         }
         return sentence;
     }
+        public static String movingLeft (String sentence,int words){
+             return sentence;   
+        }
     //move the characters to right-stern part(method 4)
     public static String moveRight(String sentence,int words){
         int len = sentence.length();
