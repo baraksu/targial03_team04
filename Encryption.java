@@ -29,9 +29,27 @@ public class Encryption{
         }
         return sentence;
     }
+    //המתודה של דביר נא לא לגעת 3 
         public static String movingLeft (String sentence,int words){
-             return sentence +"a";   
+        String word1 = "";
+        String word2 = "";
+        String word3 = "";
+        if(words== 1){
+            sentence = sentence;
         }
+        else if(words == 2){
+            word1 = sentence.substring(0,sentence.indexOf(" "));
+            word2 = sentence.substring(sentence.indexOf(" ")+1);
+            sentence = word2 + " " + word1;
+        }
+        else if(words == 3){
+            word1 = sentence.substring(0,sentence.indexOf(" "));
+            word2 = sentence.substring(sentence.indexOf(" ")+1 , sentence.lastIndexOf(" "));
+            word3 = sentence.substring(sentence.lastIndexOf(" ")+1);
+            sentence = word2 + " " + word3 + " " + word1;
+        }
+        return sentence;   
+    }
     //move the characters to right-stern part(method 4)
     public static String moveRight(String sentence,int words){
         int len = sentence.length();
