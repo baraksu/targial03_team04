@@ -63,4 +63,35 @@ public class EncryptionTester
         assertEquals("terns",result);  
     } 
     // טסטים של שטרן  16 עד 25 
+    @Test
+   public void testAdd50(){
+        
+        String result = Encryption.movingLeft("dvir gever",2);
+        assertEquals("gever dvir",result);  
+    } 
+     @Test
+   public void testAdd51(){
+        
+        String result = Encryption.movingLeft("dvir",1);
+        assertEquals("dvir",result);  
+    } 
+     @Test
+   public void testAdd52(){
+        
+        String result = Encryption.movingLeft("gever",1);
+        assertEquals("gever",result);  
+    } 
+     @Test
+   public void testAdd53(){
+        
+        String result = Encryption.movingLeft("dvir gever retsah",3);
+        assertEquals("gever retsah dvir",result);  
+    } 
+     @Test
+   public void testAdd54(){
+        
+        String result = Encryption.movingLeft("moshe ran baroh",3);
+        assertEquals("ran baroh moshe",result);  
+    } 
+       // טסטים של דביר גוטסדינר 50 עד 54
 }
