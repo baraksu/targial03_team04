@@ -12,6 +12,7 @@ public class EncryptionTester
         String result = Encryption.moveLeft("abcd",1);
         assertEquals("dabc",result);   
     }
+    // 10 הבדיקות הראשונות הם שלי
     @Test
    public static void testAdd1(){
         
