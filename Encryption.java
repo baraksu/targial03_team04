@@ -51,33 +51,37 @@ public class Encryption{
         return sentence;   
     }
     //move the characters to right-stern part(method 4)
-    public static String moveRight(String sentence,int words){
+    public static String moveRight(String sentence,int words)
+    {
         int len = sentence.length();
-        if(words==1){
+        if(words == 1 && len > 1)
+        {
             String lastchar = sentence.substring(len-1);
             String restofchar = sentence.substring(0,len-1);
             return lastchar+restofchar;
-        }else{
-            if(words==2){
+        }
+        else
+        {
+            if(words==2)
+            {
                 String lasttwochar = sentence.substring(len-2);
                 String restofchar = sentence.substring(0,len-2);
                 return lasttwochar+restofchar;
-            }else{
-                 if(words==3){
+               
+            }
+            else if(words==3)
+            {
                 String lastthreechar = sentence.substring(len-3);
                 String restofchar = sentence.substring(0,len-3);
                 return lastthreechar+restofchar;
-            }else{
-                System.out.println(sentence+"contains more than 3 words");
-            }
             }
         }
-
         return sentence;
-        }
+    }
         //move the characters back to left-stern part (method 5)
     public static String moveLeft(String sentence,int words){
-        if(words==1){
+        int len = sentence.length();
+        if(words == 1 && len > 0){
             String lastchar = sentence.substring(0,1);
             String restofchar=sentence.substring(1);
             sentence=restofchar + lastchar;
@@ -94,51 +98,62 @@ public class Encryption{
     }
       //replacing vowels to special characters-Moishie's part
     public static String replaceVowels(String sentence){
-        String result = sentence.replace('a','@');
-        result = sentence.replace('e','#');
-        result = sentence.replace('i','1');
-        result = sentence.replace('o','0');
-        result = sentence.replace('u','&');
+        String result = sentence;
+        result = result.replace('a', '@');
+        result = result.replace('e', '#');
+        result = result.replace('i', '1');
+        result = result.replace('o', '0');
+        result = result.replace('u', '&');
         return result;
     }
     //replacing special characters to vowels-Moishie's part
     public static String replaceSpecialCharacter(String sentence){
-        String result = sentence.replace('@','a');
-        result = sentence.replace('#','e');
-        result = sentence.replace('1','i');
-        result = sentence.replace('0','o');
-        result = sentence.replace('&','u');
+        String result = sentence;
+        result = result.replace('@', 'a');
+        result = result.replace('#', 'e');
+        result = result.replace('1', 'i');
+        result = result.replace('0', 'o');
+        result = result.replace('&', 'u');
         return result;
     }
     //main-moishie's part
     public static void main(String[] args){
-        Scanner scan=new Scanner(System.in);
+        Scanner reader = new Scanner(System.in);
         System.out.println("Welcome to the Encryption / Decryption Program");
         System.out.println("Enter 1 for Encrypt | 2 for Decrypt");
-        int choice=scan.nextInt();
-        if(choice==1){
-         System.out.println("Enter up to 3 words sentence");
-         String sentence=scan.nextLine();
-         int words= wordsCount(sentence);
-         if(words>3){
-             System.out.println(sentence+"contains more than 3 words");
-         }else{
-             sentence = movingRight(sentence,words);
-             sentence = moveRight(sentence,words);
-             sentence = replaceVowels(sentence);
-             System.out.println(sentence);
-             
-         }
-        }else if(choice==2){
+        int choice = reader.nextInt();
+        reader.nextLine();
+        if(choice==1)
+        {
             System.out.println("Enter up to 3 words sentence");
-            String sentence=scan.nextLine();
-            int words= wordsCount(sentence);
-            sentence = replaceSpecialCharacter(sentence);
-            sentence = movingLeft(sentence,words);
-            sentence = moveLeft(sentence,words);
-            System.out.println("The decrypted sentence:"+sentence);
-        }else{
-            System.out.println(choice+"is not a valid choice");
+            String sentence = reader.nextLine();
+            int words = wordsCount(sentence);
+            if(words >= 1 && words <= 3)
+            {
+                sentence = movingRight(sentence,words);
+                sentence = moveRight(sentence,words);
+                sentence = replaceVowels(sentence);
+                System.out.println(sentence); 
+            }
+            else
+                System.out.println(sentence+"contains more than 3 words");
         }
+        else if(choice==2)
+        {
+            System.out.println("Enter up to 3 words sentence");
+            String sentence = reader.nextLine();            
+            int words= wordsCount(sentence);
+            if(words >= 1 && words <= 3)
+            {
+                sentence = replaceSpecialCharacter(sentence);
+                sentence = moveLeft(sentence,words);
+                sentence = movingLeft(sentence,words);
+                System.out.println("The decrypted sentence:"+sentence);
+            }
+            else
+                System.out.println(sentence+"contains more than 3 words");
+        }
+        else
+            System.out.println(choice+" is not a valid choice");
     }
-    }
+}
