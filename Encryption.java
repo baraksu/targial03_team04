@@ -54,7 +54,7 @@ public class Encryption{
     public static String moveRight(String sentence,int words)
     {
         int len = sentence.length();
-        if(words == 1 && len > 1)
+        if(words == 1 && len > 0)
         {
             String lastchar = sentence.substring(len-1);
             String restofchar = sentence.substring(0,len-1);
