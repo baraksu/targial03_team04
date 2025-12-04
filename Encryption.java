@@ -1,3 +1,4 @@
+
 import java.util.*;
 public class Encryption{
     //Oz (methods 1)
@@ -58,7 +59,7 @@ public class Encryption{
         {
             String lastchar = sentence.substring(len-1);
             String restofchar = sentence.substring(0,len-1);
-            return lastchar+restofchar;
+            sentence = lastchar+restofchar;
         }
         else
         {
@@ -66,14 +67,14 @@ public class Encryption{
             {
                 String lasttwochar = sentence.substring(len-2);
                 String restofchar = sentence.substring(0,len-2);
-                return lasttwochar+restofchar;
+                sentence = lasttwochar+restofchar;
                
             }
             else if(words==3)
             {
                 String lastthreechar = sentence.substring(len-3);
                 String restofchar = sentence.substring(0,len-3);
-                return lastthreechar+restofchar;
+                sentence = lastthreechar+restofchar;
             }
         }
         return sentence;
