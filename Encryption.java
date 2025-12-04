@@ -151,7 +151,7 @@ public class Encryption{
                 System.out.println("The decrypted sentence:"+sentence);
             }
             else
-                System.out.println(sentence+"contains more than 3 words");
+                System.out.println(sentence+" contains more than 3 words");
         }
         else
             System.out.println(choice+" is not a valid choice");
