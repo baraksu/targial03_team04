@@ -1,8 +1,71 @@
-
 import static org.junit.Assert.*;
 import org.junit.Test;
 public class EncryptionTester
 {
+    @Test
+    public void testAdd1(){
+       
+        int result = Encryption.wordsCount("Yohai");
+        assertEquals(1,result);
+       
+    }
+    @Test
+    public void testAdd2(){
+       
+        int result = Encryption.wordsCount("Hi man");
+        assertEquals(2,result);
+       
+    }
+    @Test
+    public void testAdd3(){
+       
+        int result = Encryption.wordsCount("Hello big world");
+        assertEquals(3,result);
+       
+    }
+    @Test
+    public void testAdd4(){
+       
+        int result = Encryption.wordsCount("World");
+        assertEquals(1,result);
+       
+    }
+    @Test
+    public void testAdd5(){
+       
+        int result = Encryption.wordsCount("Hot cheese");
+        assertEquals(2,result);
+    }
+    @Test
+   public void testAdd6(){
+        
+        String result = Encryption.movingRight("oz gever",2);
+        assertEquals("gever oz",result);  
+    }
+    @Test
+   public void testAdd7(){
+        
+        String result = Encryption.movingLeft("the king",2);
+        assertEquals("king the",result);  
+    }
+    @Test
+   public void testAdd8(){
+        
+        String result = Encryption.movingLeft("oz",1);
+        assertEquals("oz",result);  
+    }
+    @Test
+   public void testAdd9(){
+        
+        String result = Encryption.movingLeft("me the king",3);
+        assertEquals("the king me",result);  
+    }
+    @Test
+   public void testAdd10(){
+        
+        String result = Encryption.movingLeft("lebron james garoh",3);
+        assertEquals("james garoh lebron",result);  
+    }
     @Test
    public void testAdd11(){
         
