@@ -1,39 +1,40 @@
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 public class EncryptionTester
 {
     @Test
-   public void testAdd50(){
+   public void testAdd11(){
         
         String result = Encryption.movingLeft("dvir gever",2);
         assertEquals("gever dvir",result);  
     } 
      @Test
-   public void testAdd51(){
+   public void testAdd512(){
         
         String result = Encryption.movingLeft("dvir",1);
         assertEquals("dvir",result);  
     } 
      @Test
-   public void testAdd52(){
+   public void testAdd13(){
         
         String result = Encryption.movingLeft("gever",1);
         assertEquals("gever",result);  
     } 
      @Test
-   public void testAdd53(){
+   public void testAdd14(){
         
         String result = Encryption.movingLeft("dvir gever retsah",3);
         assertEquals("gever retsah dvir",result);  
     } 
      @Test
-   public void testAdd54(){
+   public void testAdd15(){
         
         String result = Encryption.movingLeft("moshe ran baroh",3);
         assertEquals("ran baroh moshe",result);  
     } 
-       // טסטים של דביר גוטסדינר 11 עד 25
-}
+       // טסטים של דביר גוטסדינר 11 עד 15
+
     @Test
    public void testAdd16(){
         
@@ -97,62 +98,63 @@ public class EncryptionTester
     // טסטים של שטרן  16 עד 25 
     //tests 26-35 - moishie
     @Test
-   public void testAdd55(){
+   public void testAdd26(){
         
         String result = Encryption.replaceVowels("moishie the goat");
         assertEquals("m01sh1# th# g0@t",result);   
     }
     @Test
-   public void testAdd56(){
+   public void testAdd27(){
         
         String result = Encryption.replaceVowels("moshe tzvi yosef");
         assertEquals("m0sh# tzv1 y0s#f",result);   
     }
      @Test
-   public void testAdd57(){
+   public void testAdd28(){
         
         String result = Encryption.replaceVowels("nike alphafly");
         assertEquals("n1k# @lph@fly",result);   
     }
      @Test
-   public void testAdd58(){
+   public void testAdd29(){
         
         String result = Encryption.replaceVowels("shabbat shalom");
         assertEquals("sh@bb@t sh@l0m",result);   
     }
      @Test
-   public void testAdd59(){
+   public void testAdd30(){
         
         String result = Encryption.replaceVowels("rudy project");
         assertEquals("r&dy pr0j#ct",result);   
     }
      @Test
-   public void testAdd60(){
+   public void testAdd31(){
         
         String result = Encryption.replaceSpecialCharacter("m01sh1# th# g0@t");
         assertEquals("moishie the goat",result);   
     }
      @Test
-   public void testAdd61(){
+   public void testAdd32(){
         
         String result = Encryption.replaceSpecialCharacter("m0sh# tzv1 y0s#f");
         assertEquals("moshe tzvi yosef",result);   
     }
       @Test
-   public void testAdd62(){
+   public void testAdd33(){
         
         String result = Encryption.replaceSpecialCharacter("n1k# @lph@fly");
         assertEquals("nike alphafly",result);   
     }
       @Test
-   public void testAdd63(){
+   public void testAdd34(){
         
         String result = Encryption.replaceSpecialCharacter("sh@bb@t sh@l0m");
         assertEquals("shabbat shalom",result);   
     }
       @Test
-   public void testAdd64(){
+   public void testAdd35(){
         
         String result = Encryption.replaceSpecialCharacter("r&dy pr0j#ct");
         assertEquals("rudy project",result);   
     }
+}
