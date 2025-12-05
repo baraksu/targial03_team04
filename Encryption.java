@@ -1,4 +1,5 @@
 
+
 import java.util.*;
 public class Encryption{
     //Oz (methods 1)
