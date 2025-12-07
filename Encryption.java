@@ -135,7 +135,7 @@ public class Encryption{
                 sentence = movingRight(sentence,words);
                 sentence = moveRight(sentence,words);
                 sentence = replaceVowels(sentence);
-                System.out.println(sentence); 
+                System.out.println("The encrypted sentence:" + sentence); 
             }
             else
                 System.out.println(sentence+"contains more than 3 words");
@@ -150,7 +150,7 @@ public class Encryption{
                 sentence = replaceSpecialCharacter(sentence);
                 sentence = moveLeft(sentence,words);
                 sentence = movingLeft(sentence,words);
-                System.out.println("The decrypted sentence:"+sentence);
+                System.out.println("The decrypted sentence: "+sentence);
             }
             else
                 System.out.println(sentence+" contains more than 3 words");
