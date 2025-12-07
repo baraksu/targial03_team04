@@ -1,7 +1,7 @@
-import org.junit.Test;
-import org.junit.After;
-import org.junit.Before;
 import static org.junit.Assert.*;
+import org.junit.Test;
+import org.junit.Before;
+import org.junit.After;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -223,7 +223,7 @@ public class BarakEncryptionTest {
         outContent.reset();
         
         // Now decrypt
-        provideInput("2\n " + encrypted + " \n");
+        provideInput("2\n" + encrypted + "\n");
         Encryption.main(new String[]{});
         String decryptOutput = getOutput();
         
